@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Livebroadcasts</title>
+</head>
+<body>
+<h2>直播列表</h2>
+<table>
+    <tr>
+        <th>國家</th>
+        <th>直播主</th>
+        <th>地區</th>
+        <th>評價</th>
+    </tr>
+    {%  for l in livebroadcast %}
+    <tr>
+        <td> <input type="radio" name="id" value="{{ l.id }}"></td>
+        <td>{{ l.country }}</td>
+        <td>{{ l.streamer }}</td>
+        <td>{{ l.area }}</td>
+        <td><a href="/comment/{{ l.id }}/">評論</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+
+</body>
+</html>
